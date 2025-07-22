@@ -1,33 +1,34 @@
 `timescale 1ns / 1ps
 module top_module_tb(   //bu testbenchi çalıştırmak için top modulde img_mem i [31:0] cipher_text ve plain_texti [1:0] indexlerine ayarlayın
     );
- reg          clk;
- reg         reset;
- reg         data_rx;
- wire         tx;
-wire            done;
+reg         clk;
+reg         reset;
+reg         data_rx;
+wire        tx;
+wire        done;
 
 top_test_module_verilog dut(
 .clk             (clk),
 .reset           (reset),
 .rx              (data_rx),
 .tx              (tx),
-.done(done)
+.done            (done)
 );
 
-    localparam integer CLK_FREQ        = 50_000_000;   // Hz   
+    localparam integer CLK_FREQ        = 100_000_000;   // Hz   
     localparam integer BAUDRATE        = 115_200;
-    localparam integer CLK_PERIOD_NS   = 20;            // 1 / 100 MHz
+    localparam integer CLK_PERIOD_NS   = 10;            // 1 / 100 MHz
     localparam integer BIT_PERIOD_CLS = CLK_FREQ / BAUDRATE; // ≈ 868
 
     initial begin
         clk = 0;
-        forever #10 clk = ~clk; // 20 ns period
+        forever #5 clk = ~clk; // 20 ns period
     end
+
     reg [7:0] tx_data [0:15];
     integer j, k;
 
-    integer BIT_PERIOD  = 8681;
+    integer BIT_PERIOD  = 8680;
     initial begin
         reset      = 1'b1;
         #30;
@@ -75,7 +76,7 @@ top_test_module_verilog dut(
             #10;
         end
 
-/*
+
                 // Initialize the data matrix (change these values as needed)
 
         tx_data[0]  =  8'b01111010;
@@ -353,6 +354,7 @@ tx_data[15] = 8'b10001000;
             
             // Optional inter-byte delay
             #10;
-        end*/
+        end
+        $stop;
     end
 endmodule

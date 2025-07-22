@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Jul 22 14:25:50 2025
+# Process ID: 7448
+# Current directory: C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/utils_1/imports/synth_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4524 C:\Vivado Projects\AES_Encryption_Decryption_Test_1\AES_Encryption_Decryption_Test_1.srcs\utils_1\imports\synth_1\top_module.dcp
+# Log file: C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/utils_1/imports/synth_1/vivado.log
+# Journal file: C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/utils_1/imports/synth_1\vivado.jou
+# Running On: LAPTOP-HUIHR0D6, OS: Windows, CPU Frequency: 2994 MHz, CPU Physical cores: 12, Host memory: 25095 MB
+#-----------------------------------------------------------
+start_gui
+open_checkpoint {C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/utils_1/imports/synth_1/top_module.dcp}

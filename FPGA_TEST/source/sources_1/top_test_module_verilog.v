@@ -36,8 +36,8 @@ module top_test_module_verilog #(
     );
 
     uart_rx_mba #(
-    .c_clkfreq(50_000_000),
-    .c_baudrate(57_600)
+    .c_clkfreq(100_000_000),
+    .c_baudrate(115_200)
     )uart_rx_inst(
         .clk            (clk),
         .rx_i           (rx),
@@ -46,8 +46,8 @@ module top_test_module_verilog #(
     );
 
     uart_tx_mba #(
-        .c_clkfreq(50_000_000),
-        .c_baudrate(57_600),
+        .c_clkfreq(100_000_000),
+        .c_baudrate(115_200),
         .c_stopbit(1)
     ) uart_tx_inst (
         .clk            (clk),
@@ -59,9 +59,11 @@ module top_test_module_verilog #(
 
     integer BYTE_NUMBER = IMAGE_WIDTH * IMAGE_LENGHT;
     integer BLOCK_NUMBER = IMAGE_WIDTH * IMAGE_LENGHT / 16;
-
+    (* ram_style = "block" *)
     reg [7:0] img_mem [IMAGE_WIDTH * IMAGE_LENGHT -1:0];
-    reg [127:0]cipher_text[(IMAGE_WIDTH * IMAGE_LENGHT / 16)-1:0]; 
+    (* ram_style = "block" *)
+    reg [127:0]cipher_text[(IMAGE_WIDTH * IMAGE_LENGHT / 16)-1:0];
+    (* ram_style = "block" *)
     reg [127:0]plain_text[(IMAGE_WIDTH * IMAGE_LENGHT / 16)-1:0];
 
     integer index;
@@ -154,7 +156,7 @@ module top_test_module_verilog #(
                       end
                   end
             end
-            // ----------------------------------------------------- TX ------- //BURAYA SWITCH ATABİLİRSİN
+            // ----------------------------------------------------- TX ------- 
             S_TX_START : begin
                 uart_tx_start <= 0;
                 if ((index_2 <= 15 && uart_tx_done) || initial_start == 1) begin
