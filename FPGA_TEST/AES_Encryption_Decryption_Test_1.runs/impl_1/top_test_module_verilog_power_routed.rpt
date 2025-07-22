@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Mon May 12 01:01:07 2025
+| Date             : Sun Jul 20 14:35:40 2025
 | Host             : LAPTOP-HUIHR0D6 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_test_module_verilog_power_routed.rpt -pb top_test_module_verilog_power_summary_routed.pb -rpx top_test_module_verilog_power_routed.rpx
 | Design           : top_test_module_verilog
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.011 |        3 |       --- |             --- |
-| Slice Logic              |     0.023 |    24511 |       --- |             --- |
-|   LUT as Logic           |     0.022 |    11363 |     63400 |           17.92 |
-|   F7/F8 Muxes            |    <0.001 |     2290 |     63400 |            3.61 |
+| Clocks                   |     0.013 |        3 |       --- |             --- |
+| Slice Logic              |     0.022 |    17218 |       --- |             --- |
+|   LUT as Logic           |     0.020 |     8193 |     63400 |           12.92 |
+|   F7/F8 Muxes            |    <0.001 |     1720 |     63400 |            2.71 |
 |   LUT as Distributed RAM |    <0.001 |      300 |     19000 |            1.58 |
-|   Register               |    <0.001 |     8270 |    126800 |            6.52 |
-|   CARRY4                 |    <0.001 |       88 |     15850 |            0.56 |
+|   Register               |    <0.001 |     6131 |    126800 |            4.84 |
+|   CARRY4                 |    <0.001 |      128 |     15850 |            0.81 |
 |   Others                 |     0.000 |       17 |       --- |             --- |
-| Signals                  |     0.028 |    16411 |       --- |             --- |
-| I/O                      |     0.002 |       19 |       210 |            9.05 |
+| Signals                  |     0.024 |     9182 |       --- |             --- |
+| I/O                      |     0.003 |       19 |       210 |            9.05 |
 | Static Power             |     0.097 |          |           |                 |
 | Total                    |     0.160 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.076 |       0.061 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.074 |       0.059 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -129,7 +129,7 @@ Table of Contents
 +-------------+--------+-----------------+
 | Clock       | Domain | Constraint (ns) |
 +-------------+--------+-----------------+
-| sys_clk_pin | clk    |            20.0 |
+| sys_clk_pin | clk    |            10.0 |
 +-------------+--------+-----------------+
 
 
@@ -143,12 +143,12 @@ Table of Contents
 | Name                    | Power (W) |
 +-------------------------+-----------+
 | top_test_module_verilog |     0.063 |
-|   decrypt_inst          |     0.029 |
-|     Core                |     0.006 |
-|     key_expansion       |     0.022 |
-|   encrypt_inst          |     0.028 |
-|     Core                |     0.007 |
-|     key_expansion       |     0.019 |
+|   decrypt_inst          |     0.026 |
+|     Core                |     0.015 |
+|     key_expansion       |     0.009 |
+|   encrypt_inst          |     0.027 |
+|     Core                |     0.017 |
+|     key_expansion       |     0.009 |
 +-------------------------+-----------+
 
 
