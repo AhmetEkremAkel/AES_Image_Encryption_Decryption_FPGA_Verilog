@@ -19,7 +19,9 @@ The input image is parametric, serialized via UART, encrypted on the FPGA, and t
 ## 📂 Directory Structure
 
 📂 AES_Image_Encryption_Decryption_FPGA_Verilog
+
 │
+
 ├── 📂 FPGA_TEST                 #project for tests on fpga
 
 │
