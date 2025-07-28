@@ -21,20 +21,35 @@ The input image is parametric, serialized via UART, encrypted on the FPGA, and t
 📂 AES_Image_Encryption_Decryption_FPGA_Verilog
 │
 ├── 📂 FPGA_TEST                 #project for tests on fpga
+
 │
+
 ├── 📂 aes_ctr_core              #Specialized aes core for only ctr mode
+
 │
+
 ├── 📂 aes_enc_dec_cores         #basic aes enc dec cores
+
 │
+
 ├── 📂 test_benches              #all test benches
+
 │
+
 ├── 📂 top_aes_ctr_mode          #aes ctr mode top module for aes enc core
+
 │
+
 ├── 📂 uart                      #uart
+
 │
+
 ├── .gitignore
+
 │
+
 └── README.md
+
 
 
 ## 🔐 AES Algorithm Summary
