@@ -1,6 +1,6 @@
+This module implements an optimized AES core dedicated to CTR mode.
+The encryption of 128-bit data is completed in just 11 clock cycles.
+At a 100 MHz clock frequency, the design achieves a throughput of approximately 1.16 Gbps.
 
-UART TX için test bench
-![image](https://github.com/user-attachments/assets/5fb87ab1-85cc-4606-9d4a-b74fc30816cb)
-
-UART RX için test bench
-![image](https://github.com/user-attachments/assets/7ff4f668-1e7d-40e7-9617-ce1dd77a68da)
+Below are the testbench results:
+<img width="1893" height="990" alt="image" src="https://github.com/user-attachments/assets/eac23910-007b-4fc2-9b02-ebac69e4a6d3" />
