@@ -1,0 +1,115 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Jul 29 11:20:42 2025
+| Host         : LAPTOP-HUIHR0D6 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_encryption_control_sets_placed.rpt
+| Design       : top_encryption
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    37 |
+|    Minimum number of control sets                        |    37 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    39 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    37 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    25 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |              17 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            1784 |          825 |
+| Yes          | No                    | Yes                    |             407 |          131 |
+| Yes          | Yes                   | No                     |             144 |           62 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |              Enable Signal              |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                                         |                                   |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | FSM_onehot_state_reg_n_0_[1]            | reset_IBUF                        |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | Core/E[0]                               | reset_IBUF                        |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG | key_expansion/state[0]_i_1_n_0          | reset_IBUF                        |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | key_expansion/round__0                  | reset_IBUF                        |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | Core/pipeline_2_key                     | reset_IBUF                        |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | key_expansion/sbox_reg[1][0]_i_1_n_0    |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | Core/last_state_reg                     | reset_IBUF                        |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | key_expansion/sbox_reg[3][0]_i_1_n_0    |                                   |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | key_expansion/sbox_reg[2][0]_i_1_n_0    |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | key_expansion/sbox_reg                  |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | key_expansion/sbox_in0                  | key_expansion/sbox_in0[0]_i_1_n_0 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG |                                         | reset_IBUF                        |                6 |             17 |         2.83 |
+|  clk_IBUF_BUFG | key_expansion/word[3][8]_i_1_n_0        |                                   |                4 |             24 |         6.00 |
+|  clk_IBUF_BUFG | key_expansion/word[5][0]_i_1_n_0        |                                   |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | key_expansion/word[7][0]_i_1_n_0        |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | key_expansion/word[6][0]_i_1_n_0        |                                   |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | key_expansion/temp[0]_i_1_n_0           |                                   |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | Core/i[0]_i_1_n_0                       |                                   |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | key_expansion/index[31]_i_2_n_0         | key_expansion/index[31]_i_1_n_0   |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | key_expansion/word[4][0]_i_1_n_0        |                                   |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | key_expansion/word[3][8]_i_1_n_0        | key_expansion/word[3][0]_i_1_n_0  |               51 |            104 |         2.04 |
+|  clk_IBUF_BUFG | Core/state_reg                          | reset_IBUF                        |               53 |            128 |         2.42 |
+|  clk_IBUF_BUFG | Core/state_reg_2[127]_i_1_n_0           |                                   |               66 |            128 |         1.94 |
+|  clk_IBUF_BUFG | key_expansion/expanded_key[127]_i_1_n_0 | reset_IBUF                        |               21 |            128 |         6.10 |
+|  clk_IBUF_BUFG | Core/nonce                              | reset_IBUF                        |               48 |            128 |         2.67 |
+|  clk_IBUF_BUFG | Core/round_keys[2][127]_i_1_n_0         |                                   |               52 |            128 |         2.46 |
+|  clk_IBUF_BUFG | Core/round_keys[5][127]_i_1_n_0         |                                   |               63 |            128 |         2.03 |
+|  clk_IBUF_BUFG | Core/round_keys[6][127]_i_1_n_0         |                                   |               47 |            128 |         2.72 |
+|  clk_IBUF_BUFG | Core/round_keys[10][127]_i_1_n_0        |                                   |               50 |            128 |         2.56 |
+|  clk_IBUF_BUFG | Core/round_keys[7][127]_i_1_n_0         |                                   |               48 |            128 |         2.67 |
+|  clk_IBUF_BUFG | Core/round_keys[8][127]_i_1_n_0         |                                   |               49 |            128 |         2.61 |
+|  clk_IBUF_BUFG | Core/round_keys[9][127]_i_1_n_0         |                                   |               48 |            128 |         2.67 |
+|  clk_IBUF_BUFG | Core/round_keys[0][127]_i_1_n_0         |                                   |               64 |            128 |         2.00 |
+|  clk_IBUF_BUFG | Core/round_keys[1][127]_i_1_n_0         |                                   |               95 |            128 |         1.35 |
+|  clk_IBUF_BUFG | Core/round_keys[3][127]_i_1_n_0         |                                   |              114 |            128 |         1.12 |
+|  clk_IBUF_BUFG | Core/round_keys[4][127]_i_1_n_0         |                                   |               58 |            128 |         2.21 |
++----------------+-----------------------------------------+-----------------------------------+------------------+----------------+--------------+
+
+

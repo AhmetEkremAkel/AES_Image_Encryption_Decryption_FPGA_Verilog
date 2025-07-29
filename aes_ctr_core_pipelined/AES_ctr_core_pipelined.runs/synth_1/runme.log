@@ -1,0 +1,396 @@
+
+*** Running vivado
+    with args -log top_encryption.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_encryption.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_encryption.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 473.926 ; gain = 178.113
+Command: read_checkpoint -auto_incremental -incremental {C:/Vivado Projects/AES_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/utils_1/imports/synth_1/top_encryption.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Vivado Projects/AES_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/utils_1/imports/synth_1/top_encryption.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_encryption -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7412
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1327.723 ; gain = 440.395
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'nonce' is not allowed [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:29]
+INFO: [Synth 8-11241] undeclared symbol 'key_expansion_done', assumed default net type 'wire' [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:37]
+INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:40]
+INFO: [Synth 8-6157] synthesizing module 'top_encryption' [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:4]
+WARNING: [Synth 8-6104] Input port 'data_in' has an internal driver [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:17]
+WARNING: [Synth 8-6104] Input port 'key_in' has an internal driver [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:18]
+WARNING: [Synth 8-6104] Input port 'nonce' has an internal driver [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:19]
+INFO: [Synth 8-6157] synthesizing module 'AES_Core' [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:3]
+INFO: [Synth 8-6157] synthesizing module 'subbytes' [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/subbytes.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sbox_module' [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/sbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sbox_module' (0#1) [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/sbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'subbytes' (0#1) [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/subbytes.v:22]
+INFO: [Synth 8-6157] synthesizing module 'shiftrows' [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/ShiftRows.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'shiftrows' (0#1) [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/ShiftRows.v:27]
+INFO: [Synth 8-6157] synthesizing module 'mixcolumns' [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/MixColumns.v:22]
+INFO: [Synth 8-6157] synthesizing module 'mix_single_column' [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/MixColumns.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'mix_single_column' (0#1) [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/MixColumns.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'mixcolumns' (0#1) [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/MixColumns.v:22]
+INFO: [Synth 8-6157] synthesizing module 'addroundkey' [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/AddRoundKey.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'addroundkey' (0#1) [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/AddRoundKey.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Core' (0#1) [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:3]
+INFO: [Synth 8-6157] synthesizing module 'key_expansion' [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'key_expansion' (0#1) [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'top_encryption' (0#1) [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:4]
+WARNING: [Synth 8-7137] Register round_keys_reg[0] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[1] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[2] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[3] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[4] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[5] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[6] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[7] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[8] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[9] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register round_keys_reg[10] in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:57]
+WARNING: [Synth 8-7137] Register i_reg in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:94]
+WARNING: [Synth 8-7137] Register state_reg_2_reg in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:61]
+WARNING: [Synth 8-7137] Register pipeline_ready_reg in module AES_Core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:128]
+WARNING: [Synth 8-7137] Register word_reg[0] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register word_reg[1] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register word_reg[2] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register word_reg[3] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register word_reg[4] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register word_reg[5] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register word_reg[6] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register word_reg[7] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:74]
+WARNING: [Synth 8-7137] Register temp_reg in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:80]
+WARNING: [Synth 8-7137] Register index_reg in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:83]
+WARNING: [Synth 8-7137] Register sbox_reg_reg[0] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:89]
+WARNING: [Synth 8-7137] Register sbox_reg_reg[1] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:89]
+WARNING: [Synth 8-7137] Register sbox_reg_reg[2] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:89]
+WARNING: [Synth 8-7137] Register sbox_reg_reg[3] in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:89]
+WARNING: [Synth 8-7137] Register sbox_in0_reg in module key_expansion has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1444.242 ; gain = 556.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1444.242 ; gain = 556.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1444.242 ; gain = 556.914
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1444.242 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Vivado Projects/AES_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/constrs_1/new/constraint.xdc]
+Finished Parsing XDC File [C:/Vivado Projects/AES_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/constrs_1/new/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Vivado Projects/AES_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_encryption_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_encryption_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1538.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Eriüim engellendi.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1538.980 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1538.980 ; gain = 651.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1538.980 ; gain = 651.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1538.980 ; gain = 651.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'AES_Core'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top_encryption'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                              000
+             READY_STATE |                              010 |                              001
+        ENCRYPTION_STATE |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'AES_Core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                     RUN |                              010 |                               01
+                    STOP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top_encryption'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1538.980 ; gain = 651.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input  128 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 4     
+	   2 Input     32 Bit         XORs := 5     
+	   2 Input      8 Bit         XORs := 40    
+	   4 Input      8 Bit         XORs := 16    
+	   5 Input      8 Bit         XORs := 16    
+	   2 Input      2 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 17    
+	               32 Bit    Registers := 11    
+	                8 Bit    Registers := 5     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 6     
+	   3 Input  128 Bit        Muxes := 2     
+	  12 Input  128 Bit        Muxes := 1     
+	  12 Input   32 Bit        Muxes := 5     
+	  11 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	  12 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 16    
+	   3 Input    1 Bit        Muxes := 29    
+	  12 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1538.980 ; gain = 651.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++--------------+------------+---------------+----------------+
+|Module Name   | RTL Object | Depth x Width | Implemented As | 
++--------------+------------+---------------+----------------+
+|sbox_module   | sbox_lut   | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|subbytes      | p_0_out    | 256x8         | LUT            | 
+|key_expansion | p_0_out    | 256x8         | LUT            | 
++--------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 1538.980 ; gain = 651.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1543.879 ; gain = 656.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    60|
+|3     |LUT1   |     1|
+|4     |LUT2   |   358|
+|5     |LUT3   |   113|
+|6     |LUT4   |   180|
+|7     |LUT5   |   460|
+|8     |LUT6   |  2282|
+|9     |MUXF7  |   532|
+|10    |MUXF8  |   266|
+|11    |FDCE   |   422|
+|12    |FDPE   |     2|
+|13    |FDRE   |  1929|
+|14    |IBUF   |   135|
+|15    |OBUF   |     3|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1561.945 ; gain = 674.617
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 1561.945 ; gain = 579.879
+Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1561.945 ; gain = 674.617
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1564.852 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 858 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1568.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Eriüim engellendi.
+Synth Design complete | Checksum: 2652d079
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1568.520 ; gain = 1090.609
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1568.520 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Vivado Projects/AES_ctr_core_pipelined/AES_ctr_core_pipelined.runs/synth_1/top_encryption.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_encryption_utilization_synth.rpt -pb top_encryption_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 29 11:19:51 2025...

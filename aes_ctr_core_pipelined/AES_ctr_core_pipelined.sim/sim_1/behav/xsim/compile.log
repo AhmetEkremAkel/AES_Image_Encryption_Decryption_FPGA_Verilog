@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES_Core
+WARNING: [VRFC 10-2938] 'pipeline_1_key' is already implicitly declared on line 59 [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:84]
+WARNING: [VRFC 10-2938] 'pipeline_2_key' is already implicitly declared on line 66 [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v:85]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/AddRoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addroundkey
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/MixColumns.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mixcolumns
+INFO: [VRFC 10-311] analyzing module mix_single_column
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/ShiftRows.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shiftrows
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_expansion
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sbox_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/subbytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subbytes
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_encryption
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'nonce' is not allowed [C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v:31]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sim_1/new/top_encryption_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_encryption_tb
