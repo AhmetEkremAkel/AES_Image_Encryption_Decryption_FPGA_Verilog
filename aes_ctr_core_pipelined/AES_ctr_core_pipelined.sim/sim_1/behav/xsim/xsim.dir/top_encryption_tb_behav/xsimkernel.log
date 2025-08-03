@@ -1,4 +1,7 @@
-Running: xsim.dir/top_encryption_tb_behav/xsimk.exe -simmode gui -wdb top_encryption_tb_behav.wdb -simrunnum 0 -socket 10655
+Running: xsim.dir/top_encryption_tb_behav/xsimk.exe -simmode gui -wdb top_encryption_tb_behav.wdb -simrunnum 0 -socket 11898
 Design successfully loaded
-Design Loading Memory Usage: 28976 KB (Peak: 28976 KB)
-Design Loading CPU Usage: 827 ms
+Design Loading Memory Usage: 28952 KB (Peak: 28952 KB)
+Design Loading CPU Usage: 921 ms
+Simulation completed
+Simulation Memory Usage: 30012 KB (Peak: 30012 KB)
+Simulation CPU Usage: 1062 ms
