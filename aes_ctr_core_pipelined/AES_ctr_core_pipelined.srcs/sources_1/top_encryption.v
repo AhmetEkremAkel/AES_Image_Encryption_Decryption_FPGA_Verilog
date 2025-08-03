@@ -5,20 +5,20 @@ module top_encryption(
  input  wire         clk,
  input              reset,
  input              start,        // encrypt etmeye basla
- input [1:0]        data_in,      // 128-bit plaintext
- input [1:0]        key_in,       // 128-bit AES anahtarı
- input [1:0]        nonce, 
- output reg  [1:0]  data_out,     // 128-bit ciphertext
+ input [127:0]        data_in,      // 128-bit plaintext
+ input [127:0]        key_in,       // 128-bit AES anahtarı
+ input [127:0]        nonce, 
+ output reg  [127:0]  data_out,     // 128-bit ciphertext
  output reg         done_2        // encryption bitti
     );
 
 
-//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ESNASINDA I/O SAYISINI AZALTMAK ICIN EKLENMISTIR
-assign data_in = {126'b0, data_in};
-assign key_in = {126'b0, key_in};
-assign nonce = {126'b0, nonce};
-//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ESNASINDA I/O SAYISINI AZALTMAK ICIN EKLENMISTIR
-
+////DIKKAT BU KOD PARCASI SENTEZ YAPMAK ESNASINDA I/O SAYISINI AZALTMAK ICIN EKLENMISTIR
+//assign data_in = {126'b0, data_in};
+//assign key_in = {126'b0, key_in};
+//assign nonce = {126'b0, nonce};
+////DIKKAT BU KOD PARCASI SENTEZ YAPMAK ESNASINDA I/O SAYISINI AZALTMAK ICIN EKLENMISTIR
+//
 localparam IDLE                = 3'd0;
 localparam RUN                 = 3'd1;
 localparam STOP                = 3'd2;
@@ -26,7 +26,7 @@ localparam STOP                = 3'd2;
 
 wire [127:0]expanded_key;
 wire [127:0]encrypt_out;
-wire [127:0]nonce;
+//wire [127:0]nonce;
 reg [1:0]state;
 
 AES_Core Core(

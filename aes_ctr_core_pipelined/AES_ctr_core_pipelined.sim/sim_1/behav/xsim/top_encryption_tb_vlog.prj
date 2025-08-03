@@ -1,14 +1,14 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/AES_Core.v" \
-"../../../../../AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/AddRoundKey.v" \
-"../../../../../AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/MixColumns.v" \
-"../../../../../AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/ShiftRows.v" \
-"../../../../../AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/key_expansion.v" \
-"../../../../../AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Vivado Projects/AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/sbox.v" \
-"../../../../../AES_Encryption_Decryption_Test_1/AES_Encryption_Decryption_Test_1.srcs/sources_1/imports/Users/USER/Downloads/subbytes.v" \
-"../../../../../AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sources_1/new/top_encryption.v" \
-"../../../../../AES_Image_Encryp_Decryp_Project/AES_Image_Encryp_Decryp_Project.srcs/sim_1/new/top_encryption_tb.v" \
+"../../../../AES_ctr_core_pipelined.srcs/sources_1/AES_Core_4sPipe.v" \
+"../../../../AES_ctr_core_pipelined.srcs/sources_1/sub_modules/AddRoundKey.v" \
+"../../../../AES_ctr_core_pipelined.srcs/sources_1/sub_modules/MixColumns.v" \
+"../../../../AES_ctr_core_pipelined.srcs/sources_1/sub_modules/ShiftRows.v" \
+"../../../../AES_ctr_core_pipelined.srcs/sources_1/key_expansion.v" \
+"../../../../../aes_enc_dec_cores/AES_enc_Core/key_expansion/sbox.v" \
+"../../../../AES_ctr_core_pipelined.srcs/sources_1/sub_modules/subbytes.v" \
+"../../../../AES_ctr_core_pipelined.srcs/sources_1/top_encryption.v" \
+"../../../../AES_ctr_core_pipelined.srcs/tb/top_encryption_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

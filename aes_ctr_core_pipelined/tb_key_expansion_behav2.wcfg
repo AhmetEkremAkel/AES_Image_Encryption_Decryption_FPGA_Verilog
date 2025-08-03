@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="6,120.001 ns"></ZoomEndTime>
-      <Cursor1Time time="1,565.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1,454.595 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,615.096 ns"></ZoomEndTime>
+      <Cursor1Time time="1,498.557 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="182"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="55" />
+   <WVObjectSize size="58" />
    <wvobject fp_name="/top_encryption_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -90,14 +90,13 @@
       <obj_property name="CustomSignalColor">#00FF00</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_encryption_tb/dut/Core/pipeline_1_key" type="array">
-      <obj_property name="ElementShortName">pipeline_1_key[2:0]</obj_property>
-      <obj_property name="ObjectShortName">pipeline_1_key[2:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/top_encryption_tb/dut/Core/pipeline_1_key" type="logic">
+      <obj_property name="ElementShortName">pipeline_1_key</obj_property>
+      <obj_property name="ObjectShortName">pipeline_1_key</obj_property>
    </wvobject>
    <wvobject fp_name="/top_encryption_tb/dut/Core/pipeline_2_key" type="array">
-      <obj_property name="ElementShortName">pipeline_2_key[3:0]</obj_property>
-      <obj_property name="ObjectShortName">pipeline_2_key[3:0]</obj_property>
+      <obj_property name="ElementShortName">pipeline_2_key[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pipeline_2_key[1:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_encryption_tb/dut/Core/key_in" type="array">
@@ -178,105 +177,6 @@
       <obj_property name="ElementShortName">round_keys[0:10][127:0]</obj_property>
       <obj_property name="ObjectShortName">round_keys[0:10][127:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[0]" type="array">
-         <obj_property name="ElementShortName">[0][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[1]" type="array">
-         <obj_property name="ElementShortName">[1][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[2]" type="array">
-         <obj_property name="ElementShortName">[2][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[3]" type="array">
-         <obj_property name="ElementShortName">[3][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[4]" type="array">
-         <obj_property name="ElementShortName">[4][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[5]" type="array">
-         <obj_property name="ElementShortName">[5][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[6]" type="array">
-         <obj_property name="ElementShortName">[6][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[7]" type="array">
-         <obj_property name="ElementShortName">[7][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[8]" type="array">
-         <obj_property name="ElementShortName">[8][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[9]" type="array">
-         <obj_property name="ElementShortName">[9][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[10]" type="array">
-         <obj_property name="ElementShortName">[10][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][127:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[0]" type="array">
-         <obj_property name="ElementShortName">[0][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[1]" type="array">
-         <obj_property name="ElementShortName">[1][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[2]" type="array">
-         <obj_property name="ElementShortName">[2][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[3]" type="array">
-         <obj_property name="ElementShortName">[3][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[4]" type="array">
-         <obj_property name="ElementShortName">[4][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[5]" type="array">
-         <obj_property name="ElementShortName">[5][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[6]" type="array">
-         <obj_property name="ElementShortName">[6][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[7]" type="array">
-         <obj_property name="ElementShortName">[7][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[8]" type="array">
-         <obj_property name="ElementShortName">[8][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[9]" type="array">
-         <obj_property name="ElementShortName">[9][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][127:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_encryption_tb/dut/Core/round_keys[10]" type="array">
-         <obj_property name="ElementShortName">[10][127:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][127:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="/top_encryption_tb/dut/Core/state_reg" type="array">
       <obj_property name="ElementShortName">state_reg[127:0]</obj_property>
@@ -293,10 +193,6 @@
       <obj_property name="ObjectShortName">last_state_reg[127:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_encryption_tb/dut/Core/start_2" type="logic">
-      <obj_property name="ElementShortName">start_2</obj_property>
-      <obj_property name="ObjectShortName">start_2</obj_property>
-   </wvobject>
    <wvobject fp_name="/top_encryption_tb/dut/Core/done_2" type="logic">
       <obj_property name="ElementShortName">done_2</obj_property>
       <obj_property name="ObjectShortName">done_2</obj_property>
@@ -304,6 +200,22 @@
    <wvobject fp_name="/top_encryption_tb/dut/Core/i" type="array">
       <obj_property name="ElementShortName">i[31:0]</obj_property>
       <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_encryption_tb/dut/Core/pipeline_ready_2" type="logic">
+      <obj_property name="ElementShortName">pipeline_ready_2</obj_property>
+      <obj_property name="ObjectShortName">pipeline_ready_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_encryption_tb/dut/Core/pipeline_ready_3" type="logic">
+      <obj_property name="ElementShortName">pipeline_ready_3</obj_property>
+      <obj_property name="ObjectShortName">pipeline_ready_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_encryption_tb/dut/Core/pipeline_ready_4" type="logic">
+      <obj_property name="ElementShortName">pipeline_ready_4</obj_property>
+      <obj_property name="ObjectShortName">pipeline_ready_4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_encryption_tb/dut/Core/pipeline_ready_5" type="logic">
+      <obj_property name="ElementShortName">pipeline_ready_5</obj_property>
+      <obj_property name="ObjectShortName">pipeline_ready_5</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider53">
       <obj_property name="label">KEY EXP</obj_property>
