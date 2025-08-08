@@ -71,7 +71,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  {D:/Vivado documents/AES_CTR_Encryption_Decryption/aes_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/sources_1/new/AES_Core_4sPipe.v}
+  {D:/Vivado documents/AES_CTR_Encryption_Decryption/aes_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/sources_1/new/AES_Core_FullPipe.v}
   {D:/Vivado documents/AES_CTR_Encryption_Decryption/aes_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/sources_1/sub_modules/AddRoundKey.v}
   {D:/Vivado documents/AES_CTR_Encryption_Decryption/aes_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/sources_1/sub_modules/MixColumns.v}
   {D:/Vivado documents/AES_CTR_Encryption_Decryption/aes_ctr_core_pipelined/AES_ctr_core_pipelined.srcs/sources_1/sub_modules/ShiftRows.v}

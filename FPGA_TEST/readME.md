@@ -2,4 +2,4 @@ Send plaint image, first output will be the cipher image and second output will 
 
 Test Bench Results :
 
-![image](https://github.com/user-attachments/assets/20805da2-3aef-4666-9244-f4b86fe70d25)
+<img width="1920" height="696" alt="image" src="https://github.com/user-attachments/assets/a0b21ef7-5652-4483-969d-1a785f65bd7f" />
