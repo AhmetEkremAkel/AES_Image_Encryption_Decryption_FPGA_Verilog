@@ -250,15 +250,3 @@ set_property -dict {PACKAGE_PIN D4 IOSTANDARD LVCMOS33} [get_ports tx]
 #set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { QSPI_DQ[2] }]; #IO_L2P_T0_D02_14 Sch=qspi_dq[2]
 #set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { QSPI_DQ[3] }]; #IO_L2N_T0_D03_14 Sch=qspi_dq[3]
 #set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { QSPI_CSN }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
-
-
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_56]
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_57]
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_58]
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_59]
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_60]
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_61]
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_62]
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_63]
-
-set_property MARK_DEBUG false [get_nets uart_rx_inst_n_36]

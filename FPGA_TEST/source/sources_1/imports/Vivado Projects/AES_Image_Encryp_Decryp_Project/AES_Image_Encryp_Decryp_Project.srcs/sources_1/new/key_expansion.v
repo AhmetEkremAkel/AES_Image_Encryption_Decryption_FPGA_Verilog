@@ -6,8 +6,7 @@ module key_expansion(
     input  wire         start,          // 1 -> Key Expansion start
     input  wire [0:127] initial_key,    // 128 bit initial key
     
-    input  wire [0:3]   desired_round,  // requested keys round
-    output reg  [0:127] expanded_key,   // requested key
+    output reg  [127:0] expanded_key,   // requested key
     output reg          done            // 1 -> Key Expansion is complete
 );
 
@@ -20,7 +19,6 @@ initial begin
 end
 
 reg  [0:31] word [0:7];
-reg  [0:127] round_keys [0:10]; //Key registers
 reg  [0:7] sbox_in0;
 wire [0:7] sbox_out_0;
 
@@ -54,22 +52,24 @@ always @(posedge clk or posedge reset) begin
         round         <= 4'd0;
         done          <= 1'b0;
         expanded_key  <= 128'd0;
-        for (integer i = 0; i < 11; i = i + 1) begin
-            round_keys[i] <= 128'd0;
-        end
+        
     end
     else begin
+
         case (state)
 
         IDLE: begin
-            done <= 1'b0;
-            if (start)
+            if (start)begin
                 state <= LOAD;
-            else
+                done <= 1'b1;
+                expanded_key <= initial_key;
+            end else begin
                 state <= IDLE;
+            end
         end
 
         LOAD: begin
+            done <= 1'b0;
             //decomposing inital key into 4 word
             word[0] <= initial_key[0:31];
             word[1] <= initial_key[32:63];
@@ -77,7 +77,6 @@ always @(posedge clk or posedge reset) begin
             word[3] <= initial_key[96:127];
             
             // Round 0 key -> round_keys[0]
-            round_keys[0] <= initial_key;
             temp <= initial_key;
             round <= 4'd1; // first round to calculate = 1
             state <= CALC;
@@ -100,6 +99,7 @@ always @(posedge clk or posedge reset) begin
         end
 
         CALC: begin  //4 word goes sbox one by one
+            done <= 1'b0;
             if(index <= 3) begin
                 case(index)
                     0: sbox_in0 <= temp[0:7];
@@ -141,12 +141,13 @@ always @(posedge clk or posedge reset) begin
         end
 
         CALC_7:begin
-            round_keys[round] = {word[4],word[5],word[6],word[7]};
+            expanded_key = {word[4],word[5],word[6],word[7]};
+            done <= 1'b1;
 
             if (round == 10)
                 state <= DONE_STATE;
             else begin
-                temp <= round_keys[round];
+                temp <= expanded_key;
                 word[0] <= word[4];
                 word[1] <= word[5];
                 word[2] <= word[6];
@@ -158,7 +159,6 @@ always @(posedge clk or posedge reset) begin
         
         DONE_STATE: begin
             done <= 1'b1;
-            expanded_key <= round_keys[desired_round];
 
         end
         endcase
