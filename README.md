@@ -16,40 +16,6 @@ This project aims to realize a real-time, AES encryption-decryption system tailo
 
 The input image is parametric, serialized via UART, encrypted on the FPGA, and transmitted back for decryption and verification.
 
-## 📂 Directory Structure
-
-📂 AES_Image_Encryption_Decryption_FPGA_Verilog
-
-│
-
-├── 📂 FPGA_TEST                 #project for tests on fpga
-
-│
-
-├── 📂 aes_ctr_core              #Specialized aes core for only ctr mode
-
-│
-
-├── 📂 aes_enc_dec_cores         #basic aes enc dec cores
-
-│
-
-├── 📂 test_benches              #all test benches
-
-│
-
-├── 📂 uart                      #uart
-
-│
-
-├── .gitignore
-
-│
-
-└── README.md
-
-
-
 ## 🔐 AES Algorithm Summary
 
 AES (Advanced Encryption Standard), originally named Rijndael, is a symmetric block cipher standardized by NIST in 2001. In AES-128:
@@ -75,23 +41,11 @@ AES counter mode :
 ![image](https://github.com/user-attachments/assets/a7db61e7-ce55-4e43-b55c-fa805b7206f3)
 
 
-##⚙️ FPGA Architecture
-
-The project consists of modular and synchronous hardware blocks:
-
-UART Interface: For image data transmission between PC and FPGA
-
-AES Core: Implements round transformations (SubBytes, ShiftRows, etc.)
-
-Key Expansion: FSM-controlled round key generation
-
-Control FSM: Manages pipeline and data flow across AES and UART modules
-
 ## 🧩 UART-based Image Encryption Flow
 
 RGB image is loaded and zero-padded in MATLAB
 
-Image is partitioned into 8×8 blocks
+Image is partitioned into 4×4 blocks
 
 Blocks are sent sequentially via UART to the FPGA
 
@@ -100,8 +54,6 @@ FPGA encrypts each block using AES-128
 Encrypted data is returned via UART for reconstruction or decryption
 
 Complete Block Diagram
-
-![AES block diagram](https://github.com/user-attachments/assets/c80f2f60-3015-4204-9837-a4b1c92769f7)
 
 
 ## 🧪 Test Results & Analysis
