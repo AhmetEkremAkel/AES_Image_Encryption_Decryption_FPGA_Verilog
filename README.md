@@ -38,10 +38,6 @@ The input image is parametric, serialized via UART, encrypted on the FPGA, and t
 
 │
 
-├── 📂 top_aes_ctr_mode          #aes ctr mode top module for aes enc core
-
-│
-
 ├── 📂 uart                      #uart
 
 │
