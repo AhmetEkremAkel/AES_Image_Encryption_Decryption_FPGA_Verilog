@@ -2,24 +2,25 @@
 
 
 module top_encryption(
- input  wire         clk,
- input         reset,
- input         start,        // encrypt etmeye basla
- input [127:0]data_in,      // 128-bit plaintext
- input [127:0]key_in,        // 128-bit AES anahtarı
+ input  wire            clk,
+ input                  reset,
+ input                  start,         // encrypt etmeye basla
+ input [127:0]          data_in,       // 128-bit plaintext
+ input [127:0]          key_in,        // 128-bit AES anahtarı
  input [127:0]nonce, 
- output reg  [127:0] data_out,      // 128-bit ciphertext
- output reg          done_2           // encryption bitti
+ output reg  [127:0]    data_out,      // 128-bit ciphertext
+ output reg             done_2         // encryption bitti
     );
 
-//nonce sayısı (güvenlik için hiçbir zaman aynı nonce yi tekrar kullanmayın ! )
+////DIKKAT BU KOD PARCASI SENTEZ YAPARKEN I/O SAYISINI AZALTMAK ICIN EKLENMISTIR
+//Simulasyon yapacaksanız bu kodları commente alın yukarıdaki data_in key_in nonce ve data_out u [127:0] olarak yazın
+//Sentez ve implementasyon testi yapacaksanız bu kodları uncomment yapın ve bu I/O ları [1:0] a azaltın
 
-//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ICIN EKLENMISTIR//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ICIN EKLENMISTIR//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ICIN EKLENMISTIR
 //assign data_in = {126'b0, data_in};
 //assign key_in = {126'b0, key_in};
 //assign nonce = {126'b0, nonce};
-//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ICIN EKLENMISTIR//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ICIN EKLENMISTIR//DIKKAT BU KOD PARCASI SENTEZ YAPMAK ICIN EKLENMISTIR
 
+////DIKKAT BU KOD PARCASI SENTEZ YAPARKEN I/O SAYISINI AZALTMAK ICIN EKLENMISTIR
 
 localparam IDLE                = 3'd0;
 localparam RUN                 = 3'd1;
