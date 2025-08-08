@@ -1,4 +1,4 @@
-This test wrapper is designed for 6 stage piplined aes core module. Other modules will not work.
+This test wrapper is designed for 5 stage piplined aes core module. Other modules will not work.
 
 Send plaint image, first output will be the cipher image and second output will be decrpted image.
 
