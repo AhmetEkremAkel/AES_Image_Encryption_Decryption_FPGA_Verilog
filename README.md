@@ -2,7 +2,7 @@
 
 This repository presents a hardware-based implementation of AES-128 encryption and decryption for colored images using FPGA. The design is written in Verilog and tested on a Xilinx Nexys A7-100T development board via UART interface.
 
-## 👨‍💻 Contributors
+##  Contributors
 
 Ahmet Ekrem Akel
 
