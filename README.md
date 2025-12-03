@@ -1,4 +1,4 @@
-# 🔐 AES Image Encryption & Decryption on FPGA (Verilog)
+#  AES Image Encryption & Decryption on FPGA (Verilog)
 
 This repository presents a hardware-based implementation of AES-128 encryption and decryption for colored images using FPGA. The design is written in Verilog and tested on a Xilinx Nexys A7-100T development board via UART interface.
 
@@ -10,13 +10,13 @@ Ahmet Taha Aydın
 
 Supervisor: Berke Akgül (Research Assistant)
 
-## 📌 Project Overview
+##  Project Overview
 
 This project aims to realize a real-time, AES encryption-decryption system tailored for RGB image data. The core AES algorithm is fully implemented in Verilog, including key expansion, and optimized for hardware resource efficiency.
 
 The input image is parametric, serialized via UART, encrypted on the FPGA, and transmitted back for decryption and verification.
 
-## 🔐 AES Algorithm Summary
+##  AES Algorithm Summary
 
 AES (Advanced Encryption Standard), originally named Rijndael, is a symmetric block cipher standardized by NIST in 2001. In AES-128:
 
@@ -41,7 +41,7 @@ AES counter mode :
 ![image](https://github.com/user-attachments/assets/a7db61e7-ce55-4e43-b55c-fa805b7206f3)
 
 
-## 🧩 UART-based Image Encryption Flow
+##  UART-based Image Encryption Flow
 
 RGB image is loaded and zero-padded in MATLAB
 
@@ -56,7 +56,7 @@ Encrypted data is returned via UART for reconstruction or decryption
 Complete Block Diagram
 
 
-## 🧪 Test Results & Analysis
+##  Test Results & Analysis
 
 FPGA test results if 1 bit changes in key:
 
@@ -85,22 +85,4 @@ SAC (Strict Avalanche Criterion)
 BIC (Bit Independence Criterion)
 
 Linear and Differential Cryptanalysis Resistance
-
-## ⚡ Why FPGA?
-
-Low Latency, Real-Time Processing: Deterministic throughput per clock cycle
-
-Hardware-Level Key Security: Secrets stay isolated from system software
-
-Power Efficiency: Custom hardware reduces unnecessary switching
-
-Reconfigurability: Design can be modified and retargeted easily
-
-## 📎 References
-
-NIST FIPS-197 (AES standard)
-
-NIST SP 800-22 (Randomness tests)
-
-Chaotic S-Box literature
 
